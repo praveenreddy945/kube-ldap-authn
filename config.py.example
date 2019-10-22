@@ -1,15 +1,15 @@
 # LDAP search to connect to.  You normally want at least two for redundancy.
-LDAP_URL='ldap://ldap-a.example.com/ ldap://ldap-b.example.com'
+LDAP_URL='ldaps://infrads01.xis.ocean.com:1636 / ldaps://infrads02.xis.ocean.com:1636'
 
 # If True, use STARTTLS to connect to the LDAP server.  You can disable this
 # if you're using ldaps:// URLs.
 LDAP_START_TLS = True
 
 # DN to bind to the directory as before searching.  Required.
-LDAP_BIND_DN = 'cn=kube-ldap-authn,ou=applications,dc=example,dc=com'
+LDAP_BIND_DN = 'ou=READ_ONLY_DISCOVERY,ou=Accounts,dc=ocean,dc=com'
 
 # Password to bind as.  Required.
-LDAP_BIND_PASSWORD = 'mysecretpassword'
+LDAP_BIND_PASSWORD = 'Ld@pR3@d3r'
 
 # Attribute of the user entry that contains their username.
 LDAP_USER_NAME_ATTRIBUTE = 'uid'
